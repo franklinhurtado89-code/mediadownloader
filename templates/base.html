@@ -24,9 +24,15 @@
     </script>
     <title>MediaDownloader</title>
   </head>
-  <body class="bg-white dark:bg-gray-800">
+  <body
+    class="flex flex-col min-h-screen bg-white dark:bg-gray-800 dark:text-white"
+  >
     {% include "layout/navbar/navbar.html" %}
-    <main>{% block content %}{% endblock content %}</main>
+    <main
+      class="flex flex-col items-center justify-center p-4 w-full min-h-full grow"
+    >
+      {% block content %}{% endblock content %}
+    </main>
     {% include "layout/footer/footer.html" %}
 
     <script src="{% static 'src/js/navbar-toggle.js' %}"></script>
