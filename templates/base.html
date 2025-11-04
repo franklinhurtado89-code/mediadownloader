@@ -11,9 +11,31 @@
       rel="stylesheet"
       href="{% static 'src/css/output.css' %}"
     />
+    <script>
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
     <title>MediaDownloader</title>
   </head>
-  <body>
-    <main>{% block content %}{% endblock content %}</main>
+  <body
+    class="flex flex-col min-h-screen bg-white dark:bg-gray-800 dark:text-white"
+  >
+    {% include "layout/navbar/navbar.html" %}
+    <main
+      class="flex flex-col items-center justify-center p-4 w-full min-h-full grow"
+    >
+      {% block content %}{% endblock content %}
+    </main>
+    {% include "layout/footer/footer.html" %}
+
+    <script src="{% static 'src/js/navbar-toggle.js' %}"></script>
+    <script src="{% static 'src/js/theme-toggle.js' %}"></script>
   </body>
 </html>
