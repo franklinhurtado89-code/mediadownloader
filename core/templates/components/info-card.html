@@ -1,0 +1,105 @@
+<div
+  class="relative flex flex-col md:flex-row w-full lg:w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-transparent dark:border-gray-700 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl"
+>
+  <!-- Badge -->
+  <span
+    class="absolute top-2 left-2 bg-blue-600 text-white text-xs font-semibold px-2 py-1 rounded-full"
+    >VIDEO</span
+  >
+
+  <!-- Imagen -->
+  <img
+    class="w-full h-48 md:h-auto md:w-48 object-cover"
+    src="https://i.ytimg.com/vi/tTEa0JR6X8M/maxresdefault.jpg"
+    alt="Miniatura del video"
+  />
+
+  <!-- Contenido -->
+  <div class="flex flex-col grow p-5">
+    <!-- Título y Autor -->
+    <div class="grow">
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
+        Pixies / Hey (subtitulado)
+      </h3>
+      <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+        <!-- Icono Autor -->
+        <svg
+          class="w-4 h-4 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span>Pixies</span>
+      </div>
+    </div>
+
+    <!-- Stats y Botón -->
+    <div class="flex items-center justify-between mt-4">
+      <div class="flex items-center text-sm text-gray-500 dark:text-gray-300">
+        <!-- Icono Duración -->
+        <svg
+          class="w-4 h-4 mr-2"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <span>3:37 min</span>
+        <!-- El valor '217' podría ser la duración en segundos, lo he convertido a un formato más legible -->
+      </div>
+
+      <!-- Botones de Descarga -->
+      <div class="flex space-x-2">
+        <a
+          href="#"
+          class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors duration-200 dark:bg-blue-500 dark:hover:bg-blue-600"
+        >
+          <svg
+            class="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            ></path>
+          </svg>
+          Video
+        </a>
+        <a
+          href="#"
+          class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium rounded-md transition-colors duration-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+        >
+          <svg
+            class="w-4 h-4 mr-2"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.383 2.057a1 1 0 01.234.064l4 1a1 1 0 01.616.946V14.5a1 1 0 01-1.5.866l-4-2A1 1 0 018 12.5V3.057a1 1 0 011.383-1zM15 13.5V6.836l-2 .5V14l2-1.5z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          Audio
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
