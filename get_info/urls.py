@@ -1,7 +1,7 @@
 from django.urls import path
 
-from .views import info_view
+from .views import get_media_info
 
 urlpatterns = [
-    path('', info_view, name='info'),
+    path('', get_media_info, name='get_media_info'),
 ]
