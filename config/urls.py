@@ -20,5 +20,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
-    path('info/', include('get_info.urls')),
+    path('api/get-media-info/', include('get_info.urls')),
 ]

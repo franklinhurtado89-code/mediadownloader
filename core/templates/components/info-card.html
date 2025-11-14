@@ -1,5 +1,7 @@
 <div
-  class="relative flex flex-col md:flex-row w-full lg:w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-transparent dark:border-gray-700 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl"
+  id="info-card-container"
+  class="relative flex flex-col lg:flex-row w-full md:w-sm lg:w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-transparent dark:border-gray-700 transition-transform duration-300 hover:scale-[1.02] hover:shadow-2xl"
+  style="display: none"
 >
   <!-- Badge -->
   <span
@@ -9,8 +11,9 @@
 
   <!-- Imagen -->
   <img
-    class="w-full h-48 md:h-auto md:w-48 object-cover"
-    src="https://i.ytimg.com/vi/tTEa0JR6X8M/maxresdefault.jpg"
+    id="info-thumbnail"
+    class="w-full h-48 md:h-auto lg:w-48 object-cover"
+    src=""
     alt="Miniatura del video"
   />
 
@@ -18,9 +21,10 @@
   <div class="flex flex-col grow p-5">
     <!-- Título y Autor -->
     <div class="grow">
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">
-        Pixies / Hey (subtitulado)
-      </h3>
+      <h3
+        id="info-title"
+        class="text-xl font-bold text-gray-900 dark:text-white mb-1"
+      ></h3>
       <div class="flex items-center text-sm text-gray-600 dark:text-gray-400">
         <!-- Icono Autor -->
         <svg
@@ -35,7 +39,7 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <span>Pixies</span>
+        <span id="info-uploader"></span>
       </div>
     </div>
 
@@ -55,14 +59,15 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <span>3:37 min</span>
-        <!-- El valor '217' podría ser la duración en segundos, lo he convertido a un formato más legible -->
+        <span id="info-duration"></span>
       </div>
 
       <!-- Botones de Descarga -->
       <div class="flex space-x-2">
         <a
+          id="download-video"
           href="#"
+          target="_blank"
           class="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors duration-200 dark:bg-blue-500 dark:hover:bg-blue-600"
         >
           <svg
@@ -82,7 +87,9 @@
           Video
         </a>
         <a
+          id="download-audio"
           href="#"
+          target="_blank"
           class="inline-flex items-center px-4 py-2 bg-gray-200 text-gray-800 hover:bg-gray-300 text-sm font-medium rounded-md transition-colors duration-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
         >
           <svg

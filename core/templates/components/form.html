@@ -1,13 +1,12 @@
 <form
-  action="info/"
-  method="POST"
-  enctype="multipart/form-data"
+  id="media-form"
   class="mx-auto w-full md:w-sm lg:w-lg"
 >
   {% csrf_token %}
   <div class="mb-5">
     <div class="relative w-full">
       <input
+        id="url-input"
         type="text"
         name="url"
         class="block z-20 bg-gray-50 dark:bg-gray-700 p-2.5 border border-gray-300 focus:border-blue-500 dark:border-gray-600 dark:focus:border-blue-500 rounded-lg focus:ring-blue-500 w-full text-gray-900 dark:text-white text-sm dark:placeholder-gray-400"
