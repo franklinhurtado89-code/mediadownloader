@@ -1,3 +1,5 @@
+// Explícame paso a paso que hace el siguiente código:
+
 document.addEventListener('DOMContentLoaded', () => {
   const mediaForm = document.getElementById('media-form');
   const urlInput = document.getElementById('url-input');
@@ -22,10 +24,23 @@ document.addEventListener('DOMContentLoaded', () => {
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')} min`;
   };
 
+  const isYouTubeUrl = (url) => {
+    const pattern = /^(https?:\/\/)?(www\.)?(m\.)?(youtube\.com|youtu\.be)\/.+$/;
+    return pattern.test(url);
+  };
+
   mediaForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    const url = urlInput.value;
+
+    const url = urlInput.value.trim();
+
     if (!url) {
+      alert('Por favor, ingresa una URL.');
+      return;
+    }
+
+    if (!isYouTubeUrl(url)) {
+      alert('Solo se permiten enlaces de YouTube.');
       return;
     }
 
