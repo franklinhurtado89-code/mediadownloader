@@ -3,6 +3,7 @@ from django.http import JsonResponse
 import json
 
 import yt_dlp
+from yt_dlp.utils import DownloadError
 
 # Create your views here.
 
@@ -30,8 +31,11 @@ def get_media_info(request):
                     'thumbnail': info.get('thumbnail', ''),
                 }
                 return JsonResponse({'video_info': video_info})
+            
+        except DownloadError:
+            return JsonResponse({'error': 'La URL no es válida, el video no existe o es privado.'}, status=400)
         
         except Exception as e:
-            return JsonResponse({'error': f'Error al procesar la URL: {str(e)}'}, status=500)
+            return JsonResponse({'error': f'Ocurrio un error inesperado: {str(e)}'}, status=500)
         
     return JsonResponse({'error': 'Método no permitido'}, status=405)
